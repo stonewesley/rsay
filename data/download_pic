@@ -1,0 +1,16 @@
+#!/bin/bash
+
+i=0
+while read LINE
+do
+    let i=$i+1
+    num=${LINE% *}
+    url=${LINE#* }
+    pic_name=$num"_"$i".jpg"
+    file_name=$pic_name
+    if [[ (! -f "./train_data/$file_name") || (! -s "./train_data/$file_name") ]]; then
+        wget $url -O "./train_data/$file_name" -T 5 -t 1
+        echo ''
+    fi
+done < 'data_train.txt'
+
