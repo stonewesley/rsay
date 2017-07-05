@@ -3,7 +3,7 @@
 
 下载代码：
 
-'''shell
+```shell
 !/bin/bash
 
 i=0
@@ -18,7 +18,7 @@ do
         wget $url -O "./train_data/$file_name" -T 5 -t 1
     fi
 done < 'data_train.txt'
-'''
+```
 
 ## 数据统计
 训练集文件包含8209个url，其中有效url有7626个，各label数量分布如下。
