@@ -48,3 +48,5 @@ done < 'data_train.txt'
 
 ### 图片长宽分布
 用analysis.py程序分析图片长宽分布，帮助统一图片长宽。
+
+![样本长宽分布](./data/distribution_of_h_and_w.jpg)
